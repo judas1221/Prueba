@@ -1,0 +1,27 @@
+.footer-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    p{
+        font-size: .7em;
+        letter-spacing: 3px;
+        color: $iconsColor;
+        font-weight: 400;
+        font-family: $fontparagraphs;
+        padding: 10px 5px;
+        span{
+            color: $generalcolor;
+        }
+    }
+    ul{
+        display: flex;
+        li{
+            display: flex;
+            padding: 5px;
+            em{
+                color: $iconsColor;
+            }
+        }
+    }
+}

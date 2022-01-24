@@ -1,0 +1,125 @@
+.main-home{
+    section{
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $generalcolor;
+            padding: 16%;
+        }
+        h1{
+            font-size: 1.5em;
+            letter-spacing: 12px;
+            color: $titlesColor;
+            font-weight: 700;
+            font-family: $fonttitles;
+            padding: 40px;
+        }
+        p{
+            font-size: 1em;
+            letter-spacing: 3px;
+            line-height: 22px;
+            color: $titlesColor;
+            font-weight: 400;
+            font-family: $fontparagraphs;
+            text-align: center;
+        }
+        input{
+            width: 170px;
+            height: 40px;
+            background-color: $titlesColor;
+            color: $generalcolor;
+            margin: 40px;
+        }
+    }
+    section{
+        .icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5%;
+            em{
+                width: 14px;
+                height: 14px;
+                color: $generalcolor;
+                padding: 10px 20px;
+            }
+        }
+        .list{
+            display: flex;
+            justify-content: center;
+            ul{
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+                li{
+                    padding: 3px 5px;
+                    align-self: end;
+                    a{
+                        font-size: 14px;
+                        letter-spacing: 3px;
+                        color: #707070;
+                        font-weight: 400;
+                        font-family: $fontparagraphs;
+                        padding: 10px;
+                    }
+                    :hover {
+                        background-color: $generalcolor;
+                        color: $titlesColor;
+                    }
+                }
+            }
+        }
+        .galery{
+            display: flex;
+            padding: 10%;
+            .row{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li{
+                    width: 30%;
+                    padding: 10px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        box-shadow: 7px 7px 7px 3px rgba(194, 207, 215, .5);
+                    }
+                    
+                }
+            }
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input{
+                background-color: $generalcolor;
+                color: $titlesColor;
+                font-family: $fontparagraphs;
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1000px) {
+    .main-home{
+        section{
+            .container{
+                h1{
+                    font-size: 1.8em;
+                }
+            }
+        }
+        section{
+            .list{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}

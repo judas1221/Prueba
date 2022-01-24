@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+html{
+    letter-spacing: 0;
+    line-height: 24px;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    width: 100%;
+    li{
+        width: 30%;
+        padding: 10px;
+        img{
+            width: 100%;
+            height: 100%;
+            box-shadow: 7px 7px 7px 3px rgba(194, 207, 215, .5);
+        }
+        
+    }
+}

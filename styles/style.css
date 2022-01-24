@@ -1,0 +1,268 @@
+/*variables*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+/*estilos generales*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none; }
+
+html {
+  letter-spacing: 0;
+  line-height: 24px;
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none; }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
+  width: 100%; }
+  .column li {
+    width: 30%;
+    padding: 10px; }
+    .column li img {
+      width: 100%;
+      height: 100%;
+      box-shadow: 7px 7px 7px 3px rgba(194, 207, 215, 0.5); }
+
+/*header*/
+.header-home {
+  width: 100%; }
+  .header-home .header-browser {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; }
+    .header-home .header-browser .logo {
+      display: flex;
+      width: 15%; }
+      .header-home .header-browser .logo img {
+        width: 32px;
+        height: 32px; }
+      .header-home .header-browser .logo div {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px; }
+        .header-home .header-browser .logo div h2 {
+          font-size: 19px;
+          letter-spacing: 6px;
+          color: #707070;
+          font-weight: 700;
+          font-family: "Montserrat", sans-serif; }
+        .header-home .header-browser .logo div p {
+          font-size: 8px;
+          letter-spacing: 2px;
+          color: #c3d0d8;
+          font-weight: 400;
+          font-family: "Montserrat", sans-serif; }
+    .header-home .header-browser div nav .menu {
+      padding-top: 3px;
+      /*span -lineas del menu hamburguesa-*/
+      /*movimiento a cruz*/ }
+      .header-home .header-browser div nav .menu ul {
+        width: 100%;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        font-size: 15px;
+        overflow: hidden;
+        list-style: none;
+        background: rgba(255, 255, 255, 0.9);
+        height: 0px;
+        transition: height 0.5s ease; }
+        .header-home .header-browser div nav .menu ul li {
+          position: relative; }
+          .header-home .header-browser div nav .menu ul li a {
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            color: #ff5672;
+            padding: 16px 5%;
+            line-height: 28px;
+            display: block; }
+      .header-home .header-browser div nav .menu input[type="checkbox"]:checked ~ ul {
+        height: 100%;
+        transition: height 0.5s ease-in-out;
+        -moz-transition: height 0.5s ease-in-out;
+        -o-transition: height 0.5s ease-in-out;
+        -webkit-transition: height 0.5s ease-in-out; }
+      .header-home .header-browser div nav .menu input {
+        display: block;
+        height: 32px;
+        opacity: 0;
+        z-index: 2;
+        position: absolute; }
+      .header-home .header-browser div nav .menu span {
+        display: block;
+        width: 25px;
+        height: 2.5px;
+        margin-bottom: 6.5px;
+        margin-right: 10px;
+        position: relative;
+        background: #ff5672;
+        z-index: 1;
+        transform-origin: 3px 0px;
+        transition: transform 0.5s ease, opacity 0.55s ease; }
+      .header-home .header-browser div nav .menu span:first-child {
+        transform-origin: 0% 0%; }
+      .header-home .header-browser div nav .menu span:nth-last-child(2) {
+        transform-origin: 0% 100%; }
+      .header-home .header-browser div nav .menu input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(2px, 1px); }
+      .header-home .header-browser div nav .menu input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2); }
+      .header-home .header-browser div nav .menu input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(1px, 0px); }
+
+@media screen and (min-width: 1000px) {
+  .header-home .header-browser {
+    padding: 30px 100px; }
+    .header-home .header-browser div nav .menu ul {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      background: unset;
+      height: unset;
+      position: unset;
+      padding: 5px; }
+      .header-home .header-browser div nav .menu ul li {
+        padding: 3px 5px;
+        align-self: end; }
+        .header-home .header-browser div nav .menu ul li a {
+          font-size: 14px;
+          letter-spacing: 3px;
+          color: #707070;
+          font-weight: 400;
+          font-family: "Questrial", sans-serif;
+          padding: 10px; }
+          .header-home .header-browser div nav .menu ul li a em {
+            color: #ff5672; }
+        .header-home .header-browser div nav .menu ul li :hover {
+          background-color: #ff5672;
+          color: #FFFFFF; }
+    .header-home .header-browser div nav .menu input {
+      display: none; }
+    .header-home .header-browser div nav .menu span {
+      display: none; } }
+.main-home section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5672;
+  padding: 16%; }
+.main-home section h1 {
+  font-size: 1.5em;
+  letter-spacing: 12px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  padding: 40px; }
+.main-home section p {
+  font-size: 1em;
+  letter-spacing: 3px;
+  line-height: 22px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: "Questrial", sans-serif;
+  text-align: center; }
+.main-home section input {
+  width: 170px;
+  height: 40px;
+  background-color: #FFFFFF;
+  color: #ff5672;
+  margin: 40px; }
+.main-home section .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%; }
+  .main-home section .icons em {
+    width: 14px;
+    height: 14px;
+    color: #ff5672;
+    padding: 10px 20px; }
+.main-home section .list {
+  display: flex;
+  justify-content: center; }
+  .main-home section .list ul {
+    display: flex;
+    flex-direction: column;
+    padding: 5px; }
+    .main-home section .list ul li {
+      padding: 3px 5px;
+      align-self: end; }
+      .main-home section .list ul li a {
+        font-size: 14px;
+        letter-spacing: 3px;
+        color: #707070;
+        font-weight: 400;
+        font-family: "Questrial", sans-serif;
+        padding: 10px; }
+      .main-home section .list ul li :hover {
+        background-color: #ff5672;
+        color: #FFFFFF; }
+.main-home section .galery {
+  display: flex;
+  padding: 10%; }
+  .main-home section .galery .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .main-home section .galery .row li {
+      width: 30%;
+      padding: 10px; }
+      .main-home section .galery .row li img {
+        width: 100%;
+        height: 100%;
+        box-shadow: 7px 7px 7px 3px rgba(194, 207, 215, 0.5); }
+.main-home section .button {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .main-home section .button input {
+    background-color: #ff5672;
+    color: #FFFFFF;
+    font-family: "Questrial", sans-serif;
+    font-size: 1em;
+    padding: 10px; }
+
+@media screen and (min-width: 1000px) {
+  .main-home section .container h1 {
+    font-size: 1.8em; }
+  .main-home section .list ul {
+    display: flex;
+    flex-direction: row; } }
+.footer-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%; }
+  .footer-home p {
+    font-size: .7em;
+    letter-spacing: 3px;
+    color: #c2cfd7;
+    font-weight: 400;
+    font-family: "Questrial", sans-serif;
+    padding: 10px 5px; }
+    .footer-home p span {
+      color: #ff5672; }
+  .footer-home ul {
+    display: flex; }
+    .footer-home ul li {
+      display: flex;
+      padding: 5px; }
+      .footer-home ul li em {
+        color: #c2cfd7; }
+
+/*# sourceMappingURL=style.css.map */
